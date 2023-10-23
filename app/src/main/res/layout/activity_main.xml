@@ -4,30 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".presentation.MainActivity"
     android:orientation="vertical">
 
-    <TextView
+    <ImageView
+        android:id="@+id/url_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/habitacion"
         android:layout_margin="5dp"
         />
     <TextView
+        android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Alojamiento"
+        android:text="Esto seria el titulo"
         android:layout_marginStart="10dp"
         android:layout_marginTop="15dp"
         android:textSize="25dp"
         />
 
     <TextView
+        android:id="@+id/description"
         android:layout_width="372dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="15dp"
-        android:text="Accede a descuetnos de hoteles, aparatamentos, hostales... y mucho mas"
+        android:text=" Esta es la descipcion de esta imagen"
         android:textSize="25dp" />
 
 </LinearLayout>
