@@ -12,6 +12,13 @@ class HouseDataRepository(
     private val remote:RemoteDataSource
 ):HouseRepository {
     override suspend fun obtain(): Either<ErrorApp, House> {
-        var house=local
+        var house=local.getHouse()
+        house.mapLeft {
+            return  remote.getHouse().map {
+                local.save(it)
+                it
+            }
+        }
+        return house
     }
 }
